@@ -175,5 +175,35 @@
       "url":"https://mohistmc.com/api/v2/projects/mohist/1.7.10/builds/46/mohist-1.7.10-46-server.jar",
       "forge_version":"10.13.4.1614"
    }
+  },
+  "arclight": {
+   "1.20.4":{
+      "url":"https://github.com/IzzelAliz/Arclight/releases/download/Whisper%2F1.0.4/arclight-forge-1.20.4-1.0.4-80ec5df.jar",
+      "forge_version":"49.0.31"
+   },
+   "1.20.2":{
+      "url":"https://github.com/IzzelAliz/Arclight/releases/download/Net%2F1.0.3/arclight-forge-1.20.2-1.0.3.jar",
+      "forge_version":"48.1.0"
+   },
+   "1.20.1":{
+      "url":"https://github.com/IzzelAliz/Arclight/releases/download/Trials%2F1.0.5/arclight-forge-1.20.1-1.0.5.jar",
+      "forge_version":"47.2.20"
+   },
+   "1.19.4":{
+      "url":"https://github.com/IzzelAliz/Arclight/releases/download/Executions%2F1.0.8/arclight-forge-1.19.4-1.0.8.jar",
+      "forge_version":"45.2.6"
+   },
+   "1.19.2":{
+      "url":"https://github.com/IzzelAliz/Arclight/releases/download/horn%2F1.0.5/arclight-forge-1.19.2-1.0.5.jar",
+      "forge_version":"43.3.8"
+   },
+   "1.18.2":{
+      "url":"https://github.com/IzzelAliz/Arclight/releases/download/1.18%2F1.0.12/arclight-forge-1.18.2-1.0.12.jar",
+      "forge_version":"40.2.14"
+   },
+   "1.16.5":{
+      "url":"https://github.com/IzzelAliz/Arclight/releases/download/1.16%2F1.0.25/arclight-forge-1.16.5-1.0.25.jar",
+      "forge_version":"36.2.39"
+   }
   }
 }
