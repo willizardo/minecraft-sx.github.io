@@ -1,0 +1,1 @@
+Aquí irán los archivos necesarios para el funcionamiento de MSX. Cuidado al modificar esta carpeta o sus contenidos.
