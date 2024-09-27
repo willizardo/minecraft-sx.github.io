@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MSX | Server Jar's</title>
+  </head>
+  <body>
+    <label for="srv_type">Tipo de servidor:</label>
+    <select name="srv_type" id="srv_type"></select>
+    <label for="srv_version">Versión del servidor</label>
+    <select name="srv_version" id="srv_version"></select>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var select_a = document.getElementById("srv_type");
+        var select_b = document.getElementById("srv_version");
+
+        var servers = {
+          1: { "1.12.2": "" },
+          2: { "1.16.5": "" },
+          3: { "1.20.1": "" },
+        };
+
+        arrayed = Object.keys(servers);
+        for (var i in arrayed) {
+          var option = document.createElement("option");
+          option.text = arrayed[i];
+          option.value = i;
+          select_a.add(option);
+        }
+
+        function updateSelectB() {
+          console.log(select_a);
+          arrayed = Object.keys(servers[`${select_a.selec}`]);
+          for (var i in arrayed) {
+            var option = document.createElement("option");
+            option.text = arrayed[i];
+            option.value = i;
+            select_b.add(option);
+          }
+        }
+        select_a.addEventListener("change", updateSelectB);
+      });
+    </script>
+  </body>
+</html>
