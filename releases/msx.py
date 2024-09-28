@@ -40,27 +40,35 @@
 # =================================================
 # No toques nada de aquí para abajo, puedes dañarlo
 # =================================================
-F='servidor.py'
+A='server.py'
 E=print
-import requests as C,os as A,base64 as G,glob as D,time
-if A.path.exists(F):A.remove(F)
-if not A.path.exists('./.gitignore'):
-	H='L3RhaWxzY2FsZS1jcw0KL3dvcmtfYXJlYSoNCmNvbXBvc2VyLioNCi9QeXRob24qDQoqLm91dHB1dA0KL01vZGdlc3QNCi90aGFub3MNCi92ZW5kb3INCi9ia2Rpcg0KKi50eHQNCioucHljDQoqLm1zcA0KKi5tc3gNCioucHk=';I=G.standard_b64decode(H).decode()
-	with open('.gitignore','w')as J:J.write(I)
-def K(download_path='.'):
-	H='*.msx';I='https://minecraft-sx.github.io/data/links.json'
+import requests as F,os as B,base64 as D,glob as C,time
+if B.path.exists(A):B.remove(A)
+if not B.path.exists('./.gitignore'):
+	G='L3RhaWxzY2FsZS1jcw0KL3dvcmtfYXJlYSoNCmNvbXBvc2VyLioNCi9QeXRob24qDQoqLm91dHB1dA0KL01vZGdlc3QNCi90aGFub3MNCi92ZW5kb3INCi9ia2Rpcg0KKi50eHQNCioucHljDQoqLm1zcA0KKi5tc3gNCioucHk=';H=D.standard_b64decode(G).decode()
+	with open('.gitignore','w')as I:I.write(H)
+def J(download_path='.'):
+	D='*.msx';I='https://minecraft-sx.github.io/data/links.json';A=C.glob(D)
+	if len(A)>0:A=A[0]
+	else:A=''
 	try:
-		F=C.get(I)
-		if F.status_code==200:
-			J=F.json();G=J.get('latest');B=G.split('/')[-1]
-			if B in D.glob(H):return B
-			else:A.system('rm *.msx');E('Actualizando tu versión de MSX...');time.sleep(1.5)
-			K=A.path.join(download_path,B)
-			with open(K,'wb')as L:L.write(C.get(G).content)
-			return B
-	except:
-		if B in D.glob(H):return B
-		else:E('Error al iniciar MSX')
-B=K()
-if B.split('.')[-1]=='msx':A.system(f"chmod +x {B} && ./{B}")
-else:A.system(f"python3 {B}")
+		G=F.get(I)
+		if G.status_code==200:
+			J=G.json();H=J.get('latest');A=H.split('/')[-1]
+			if A in C.glob(D):return A
+			else:B.system('rm *.msx >> /dev/null 2>&1');E('Actualizando tu versión de MSX...');time.sleep(1.5)
+			K=B.path.join(download_path,A)
+			with open(K,'wb')as L:L.write(F.get(H).content)
+			return A
+		else:
+			E('Error al actualizar MSX')
+			if A in C.glob(D):return A
+	except Exception as M:
+		E(f"Error general: {M}")
+		if A in C.glob(D):return A
+def K():
+	A=J()
+	if A==None:return
+	if A.split('.')[-1]=='msx':B.system(f"chmod +x {A} && ./{A}")
+	else:B.system(f"python3 {A}")
+K()
