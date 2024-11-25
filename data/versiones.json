@@ -1,5 +1,6 @@
 {
    "forge":{
+      "1.21.3": "https://maven.minecraftforge.net/net/minecraftforge/forge/1.21.3-53.0.25/forge-1.21.3-53.0.25-installer.jar",
       "1.21.1":"https://maven.minecraftforge.net/net/minecraftforge/forge/1.21.1-52.0.9/forge-1.21.1-52.0.9-installer.jar",
       "1.21":"https://maven.minecraftforge.net/net/minecraftforge/forge/1.21-51.0.33/forge-1.21-51.0.33-installer.jar",
       "1.20.6":"https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.6-50.1.14/forge-1.20.6-50.1.14-installer.jar",
@@ -45,6 +46,8 @@
       "1.7.2":"https://maven.minecraftforge.net/net/minecraftforge/forge/1.7.2-10.12.2.1161-mc172/forge-1.7.2-10.12.2.1161-mc172-installer.jar"
    },
    "vanilla":{
+      "1.21.3": "https://piston-data.mojang.com/v1/objects/45810d238246d90e811d896f87b14695b7fb6839/server.jar",
+      "1.21.2": "https://piston-data.mojang.com/v1/objects/7bf95409b0d9b5388bfea3704ec92012d273c14c/server.jar",
       "1.21.1":"https://piston-data.mojang.com/v1/objects/59353fb40c36d304f2035d51e7d6e6baa98dc05c/server.jar",
       "1.21":"https://piston-data.mojang.com/v1/objects/450698d1863ab5180c25d7c804ef0fe6369dd1ba/server.jar",
       "1.20.6":"https://piston-data.mojang.com/v1/objects/145ff0858209bcfc164859ba735d4199aafa1eea/server.jar",
@@ -108,6 +111,8 @@
       "1.7.10":"https://launcher.mojang.com/v1/objects/952438ac4e01b4d115c5fc38f891710c4941df29/server.jar"
    },
    "fabric":{
+      "1.21.3": "https://meta.fabricmc.net/v2/versions/loader/1.21.3/0.16.9/1.0.1/server/jar",
+      "1.21.2": "https://meta.fabricmc.net/v2/versions/loader/1.21.2/0.16.9/1.0.1/server/jar",
       "1.21.1":"https://meta.fabricmc.net/v2/versions/loader/1.21.1/0.16.3/1.0.1/server/jar",
       "1.21":"https://meta.fabricmc.net/v2/versions/loader/1.21/0.16.3/1.0.1/server/jar",
       "1.20.6":"https://meta.fabricmc.net/v2/versions/loader/1.20.6/0.16.3/1.0.1/server/jar",
@@ -207,6 +212,7 @@
       }
    },
    "paper":{
+      "1.21.3":"https://api.papermc.io/v2/projects/paper/versions/1.21.3/builds/63/downloads/paper-1.21.3-63.jar",
       "1.21.1":"https://api.papermc.io/v2/projects/paper/versions/1.21.1/builds/57/downloads/paper-1.21.1-57.jar",
       "1.21":"https://api.papermc.io/v2/projects/paper/versions/1.21/builds/130/downloads/paper-1.21-130.jar",
       "1.20.6":"https://api.papermc.io/v2/projects/paper/versions/1.20.6/builds/149/downloads/paper-1.20.6-149.jar",
