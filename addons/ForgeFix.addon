@@ -6,8 +6,7 @@ a_author __elyx
 :button arreglar_forge
 text Arreglar instalación de Forge
 nav %server_folder%
-download_file https://raw.githubusercontent.com/minecraft-sx/minecraft-sx.github.io/refs/heads/main/data/forgefix_args.txt unix_args.txt
-exec cp unix_args.txt %server_folder%/$(ls -d libraries/net/minecraftforge/forge/*/ 2>/dev/null | head -n 1)
-say Instalación de forge arreglada para la 1.20.1-47.3.7
-say Si tienes una versión diferente abre ticket en el servidor de MSX.
+exec java -jar forge.jar --installServer
+cls
+say Instalación de Forge arreglada
 pause
