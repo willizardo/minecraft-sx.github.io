@@ -154,7 +154,7 @@
         },
         "1.20.1": {
             "url": "https://mohistmc.com/api/v2/projects/mohist/1.20.1/builds/855/mohist-1.20.1-855-server.jar",
-            "forge_version": "47.1.106"
+            "forge_version": "47.3.12"
         },
         "1.19.4": {
             "url": "https://mohistmc.com/api/v2/projects/mohist/1.19.4/builds/214/mohist-1.19.4-214-server.jar",
