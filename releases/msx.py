@@ -45,7 +45,7 @@ E=print
 import requests as F,os as B,base64 as D,glob as C,time
 if B.path.exists(A):B.remove(A)
 if not B.path.exists('./.gitignore'):
-	G='L3RhaWxzY2FsZS1jcw0KL3dvcmtfYXJlYSoNCmNvbXBvc2VyLioNCi9QeXRob24qDQoqLm91dHB1dA0KL01vZGdlc3QNCi90aGFub3MNCi92ZW5kb3INCi9ia2Rpcg0KKi50eHQNCioucHljDQoqLm1zcA0KKi5tc3gNCioucHk=';H=D.standard_b64decode(G).decode()
+	G='L3RhaWxzY2FsZS1jcwovd29ya19hcmVhKgpjb21wb3Nlci4qCi9QeXRob24qCioub3V0cHV0Ci9Nb2RnZXN0Ci90aGFub3MKL3ZlbmRvcgovYmtkaXIKKi5weWMKKi5tc3AKKi5tc3gKKi5weQ===';H=D.standard_b64decode(G).decode()
 	with open('.gitignore','w')as I:I.write(H)
 def J(download_path='.'):
 	D='*.msx';I='https://minecraft-sx.github.io/data/links.json';A=C.glob(D)
