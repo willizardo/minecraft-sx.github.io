@@ -1,0 +1,20 @@
+:main
+a_name Fabric Version | Modpack TOOL
+a_version 1.0
+a_author singu
+
+⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘
+
+:auto
+download_file https://www.dropbox.com/scl/fo/bcxtqgrxlchmbgk7k2xyv/AERHNyZL3vimBx6h_Ie61k0?rlkey=4tngt1ufy4q944mqkhywpq60u&st=uupcifu3&dl=1 singu.zip
+unzip singu.zip
+exec rm singu.zip
+exec mv fabric_modpack_tool.py addons
+
+:button instalar_modpack
+text Instalar Modpack
+c_exec download_modpack()
+
+:button fabric_ver
+text Cambiar version de Fabric
+c_exec fabric_warn()
