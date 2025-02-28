@@ -40,35 +40,51 @@
 # =================================================
 # No toques nada de aquí para abajo, puedes dañarlo
 # =================================================
+H='.gitignore'
 A='server.py'
-E=print
-import requests as F,os as B,base64 as D,glob as C,time
+F='.'
+G=print
+E='nt'
+import requests as I,os as B,base64 as J,glob as D,time
 if B.path.exists(A):B.remove(A)
-if not B.path.exists('./.gitignore'):
-	G='L3RhaWxzY2FsZS1jcwovd29ya19hcmVhKgpjb21wb3Nlci4qCi9QeXRob24qCioub3V0cHV0Ci9Nb2RnZXN0Ci90aGFub3MKL3ZlbmRvcgovYmtkaXIKKi5weWMKKi5tc3AKKi5tc3gKKi5weQ===';H=D.standard_b64decode(G).decode()
-	with open('.gitignore','w')as I:I.write(H)
-def J(download_path='.'):
-	D='*.msx';I='https://minecraft-sx.github.io/data/links.json';A=C.glob(D)
+if not B.path.exists(H):
+	K='L3RhaWxzY2FsZS1jcwovd29ya19hcmVhKgpjb21wb3Nlci4qCi9QeXRob24qCioub3V0cHV0Ci9Nb2RnZXN0Ci90aGFub3MKL3ZlbmRvcgovYmtkaXIKamF2YS8KKi5leGUKKi5tc2kKKi50eHQKKi5weWMKKi5tc3AKKi5tc3gKbXN4LnB5';L=J.standard_b64decode(K).decode()
+	with open(H,'w')as M:M.write(L)
+	if B.name==E:
+		C='MSX'
+		if not B.path.exists(C):B.mkdir(C)
+	else:C=F
+def N(download_path=C):
+	F='*.msx';L='https://minecraft-sx.github.io/data/links.json'
+	if B.name==E:A=D.glob(f"{C}\\sel*.exe")
+	else:A=D.glob(F)
 	if len(A)>0:A=A[0]
 	else:A=''
 	try:
-		G=F.get(I)
-		if G.status_code==200:
-			J=G.json();H=J.get('latest');A=H.split('/')[-1]
-			if A in C.glob(D):return A
-			else:B.system('rm *.msx >> /dev/null 2>&1');E('Actualizando tu versión de MSX...');time.sleep(1.5)
-			K=B.path.join(download_path,A)
-			with open(K,'wb')as L:L.write(F.get(H).content)
+		J=I.get(L)
+		if J.status_code==200:
+			K=J.json()
+			if B.name==E:H=K.get('latest_win')
+			else:H=K.get('latest')
+			A=H.split('/')[-1]
+			if A in D.glob(F)or A in D.glob(f"{C}\\sel*.exe"):return A
+			else:
+				if B.name!=E:B.system('rm *.msx >> /dev/null 2>&1')
+				else:B.system(f"del /f /q {C}\\sel*.exe")
+				G('Actualizando tu versión de MSX...');time.sleep(1.5)
+			M=B.path.join(download_path,A)
+			with open(M,'wb')as N:N.write(I.get(H).content)
 			return A
 		else:
-			E('Error al actualizar MSX')
-			if A in C.glob(D):return A
-	except Exception as M:
-		E(f"Error general: {M}")
-		if A in C.glob(D):return A
-def K():
-	A=J()
+			G('Error al actualizar MSX')
+			if A in D.glob(F)or A in D.glob(f"{C}\\sel*.exe"):return A
+	except Exception as O:
+		G(f"Error general: {O}")
+		if A in D.glob(F)or A in D.glob(f"{C}\\sel*.exe"):return A
+def O():
+	A=N()
 	if A==None:return
-	if A.split('.')[-1]=='msx':B.system(f"chmod +x {A} && ./{A}")
+	elif A.split(F)[-1]=='msx':B.system(f"chmod +x {A} && ./{A}")
+	elif A.split(F)[-1]=='exe':B.system(f"start {C}\\{A}")
 	else:B.system(f"python3 {A}")
-K()
+O()
