@@ -40,21 +40,20 @@
 # =================================================
 # No toques nada de aquí para abajo, puedes dañarlo
 # =================================================
-H='.gitignore'
-A='server.py'
 F='.'
 G=print
 E='nt'
-import requests as I,os as B,base64 as J,glob as D,time
-if B.path.exists(A):B.remove(A)
-if not B.path.exists(H):
-	K='L3RhaWxzY2FsZS1jcwovd29ya19hcmVhKgpjb21wb3Nlci4qCi9QeXRob24qCioub3V0cHV0Ci9Nb2RnZXN0Ci90aGFub3MKL3ZlbmRvcgovYmtkaXIKamF2YS8KKi5leGUKKi5tc2kKKi50eHQKKi5weWMKKi5tc3AKKi5tc3gKbXN4LnB5';L=J.standard_b64decode(K).decode()
-	with open(H,'w')as M:M.write(L)
-	if B.name==E:
-		C='MSX'
-		if not B.path.exists(C):B.mkdir(C)
-	else:C=F
-def N(download_path=C):
+import requests as I,os as B,base64 as H,glob as D,time
+if B.name==E:
+	C='MSX'
+	if not B.path.exists(C):B.mkdir(C)
+else:C=F
+if B.name==E:A=f"{C}\\.gitignore"
+else:A='.gitignore'
+if not B.path.exists(A):
+	J='L3RhaWxzY2FsZS1jcwovd29ya19hcmVhKgpjb21wb3Nlci4qCi9QeXRob24qCioub3V0cHV0Ci9Nb2RnZXN0Ci90aGFub3MKL3ZlbmRvcgovYmtkaXIKamF2YS8KKi5leGUKKi5tc2kKKi50eHQKKi5weWMKKi5tc3AKKi5tc3gKbXN4LnB5';K=H.standard_b64decode(J).decode()
+	with open(A,'w')as L:L.write(K)
+def M(download_path=C):
 	F='*.msx';L='https://minecraft-sx.github.io/data/links.json'
 	if B.name==E:A=D.glob(f"{C}\\sel*.exe")
 	else:A=D.glob(F)
@@ -81,10 +80,10 @@ def N(download_path=C):
 	except Exception as O:
 		G(f"Error general: {O}")
 		if A in D.glob(F)or A in D.glob(f"{C}\\sel*.exe"):return A
-def O():
-	A=N()
+def N():
+	A=M()
 	if A==None:return
 	elif A.split(F)[-1]=='msx':B.system(f"chmod +x {A} && ./{A}")
-	elif A.split(F)[-1]=='exe':B.system(f"start {C}\\{A}")
+	elif A.split(F)[-1]=='exe':B.system(f"start /D {C} {C}\\{A}")
 	else:B.system(f"python3 {A}")
-O()
+N()
